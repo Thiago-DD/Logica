@@ -1,5 +1,7 @@
 package programacao.logica.estudo.exercicios;
 
+import java.util.Scanner;
+
 public class ex03 {
     public static void main(String[] args) {
         /*
@@ -8,8 +10,12 @@ public class ex03 {
         deve-se atribuir o resultado a uma variável C e imprimir seu valor na tela.
         */
 
-        int valorA = 4;
-        int valorB = 6;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("insira o valor de (A): ");
+        int valorA = scanner.nextInt();
+        System.out.println("Insira o valor de (B): ");
+        int valorB = scanner.nextInt();
         int valorC;
 
         if (valorA == valorB) {
@@ -18,5 +24,6 @@ public class ex03 {
             valorC = valorA * valorB;
         }
         System.out.println("O valor de C é: " + valorC);
+        scanner.close();
     }
 }
